@@ -1,7 +1,6 @@
 const addToShoppingCartButtons = document.querySelectorAll('.addToCart');
 addToShoppingCartButtons.forEach((addToCartButton) => {
   addToCartButton.addEventListener('click', addToCartClicked);
-  savelocal()
 });
 
 const comprarButton = document.querySelector('.comprarButton');
