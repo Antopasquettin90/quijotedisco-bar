@@ -1,6 +1,7 @@
 const addToShoppingCartButtons = document.querySelectorAll('.addToCart');
 addToShoppingCartButtons.forEach((addToCartButton) => {
   addToCartButton.addEventListener('click', addToCartClicked);
+  savelocal()
 });
 
 const comprarButton = document.querySelector('.comprarButton');
@@ -116,3 +117,8 @@ function comprarButtonClicked() {
   shoppingCartItemsContainer.innerHTML = '';
   updateShoppingCartTotal();
 }
+
+//JSON ---> LOCAL STORANGE
+const savelocal = () => {
+  localStorage.setItem("carrito", JSON.stringify(addToShoppingCartButtons));
+};
